@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Conversor de ângulo trigonométrico</title>
+        <style>
+            body{
+                text-align: center;
+            
+            }
+            h1{
+                font-size: 150pt Arial;
+            }
+            input{
+                width:600px;
+                height:300px;
+            }
+            button{
+                font-size: 150pt Arial;
+                width: 600px;
+                height: 200px;
+            }
+            
+        </style>
+        <script>
+            function Converter(){
+                var angulo = document.getElementById("grau").value;
+                var resultADO = document.getElementById("resultado");
+                var anguloTrigonometrico = parseInt(angulo);
+                var ciclo = 360;
+
+                if(angulo>360){
+                    resultADO.innerHTML = "<font size = 7>" + anguloTrigonometrico % ciclo + "</font>"; 
+                    //Em JavaScript o símbolo da porcentagem significa resto
+                }else{
+                    resultADO.innerHTML = "<font size = 7>" + anguloTrigonometrico + "</font>";
+                }
+    
+            }
+            </script>
+    </head>
+<body>
+<h1>Ângulo (em graus):<input type="number" name="grau" id="grau"></h1><br>
+<button onclick = "Converter()"><font size = 7>Clique aqui para obter o resultado</font></button>
+<div id="resultado"><font size = 7></font></div>
+</body>
+</html>
